@@ -14,6 +14,10 @@
     <material name="orange">
         <color rgba="1 0.3 0.1 1"/>
     </material>
+    
+    <material name="grey">
+        <color rgba="0.5 0.5 0.5 1"/>
+    </material>
 
     <material name="blue">
         <color rgba="0.2 0.2 1 1"/>
@@ -27,6 +31,16 @@
 
     <link name="base_link">
 
+    </link>
+     <!-- BASE_FOOTPRINT LINK -->
+
+    <joint name="base_footprint_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="base_footprint"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <link name="base_footprint">
     </link>
 
 
@@ -44,7 +58,7 @@
             <geometry>
                <mesh filename="file:///home/artem/mesh_car/src/mesh_car/meshes/car.stl" scale="0.005 0.005 0.005"/> 
             </geometry>
-            <material name="white"/>
+            <material name="orange"/>
         </visual>
         <collision>
             <origin xyz="0.1 0 0"/>
@@ -59,25 +73,25 @@
 
     <gazebo reference="chassis"> 
         <material>
-            Gazebo/White
+            Gazebo/Orange
         </material>
     </gazebo>
     
     <!-- LEFT WHEEL LINK -->
 
-    <joint name="left_wheel_joint" type="continuous">
+    <joint name="left_rare_wheel_joint" type="continuous">
         <parent link="base_link"/>
-        <child link="left_wheel"/>
+        <child link="left_rare_wheel"/>
         <origin xyz="-0.115 0.15 0" rpy="0 0 0" />
         <axis xyz="0 1 0"/>
     </joint>
 
-    <link name="left_wheel">
+    <link name="left_rare_wheel">
         <visual>
             <geometry>
                 <mesh filename="file:///home/artem/mesh_car/src/mesh_car/meshes/left_tire.stl" scale="0.002 0.002 0.002"/>  
             </geometry>
-            <material name="blue"/>
+            <material name="black"/>
         </visual>
         <collision>
             <geometry>
@@ -89,27 +103,27 @@
         </xacro:inertial_cylinder>
     </link>
 
-    <gazebo reference="left_wheel"> 
+    <gazebo reference="left_rare_wheel"> 
         <material>
-            Gazebo/Blue
+            Gazebo/Black
         </material>
     </gazebo>
 
     <!-- LEFT2 WHEEL LINK -->
 
-    <joint name="left2_wheel_joint" type="continuous">
+    <joint name="left_front_wheel_joint" type="continuous">
         <parent link="base_link"/>
-        <child link="left2_wheel"/>
+        <child link="left_front_wheel"/>
         <origin xyz="0.285 0.15 0" rpy="0 0 0" />
         <axis xyz="0 1 0"/>
     </joint>
 
-    <link name="left2_wheel">
+    <link name="left_front_wheel">
         <visual>
             <geometry>
                  <mesh filename="file:///home/artem/mesh_car/src/mesh_car/meshes/left_tire.stl" scale="0.002 0.002 0.002"/>  
             </geometry>
-            <material name="blue"/>
+            <material name="black"/>
         </visual>
         <collision>
             <geometry>
@@ -121,28 +135,28 @@
         </xacro:inertial_cylinder>
     </link>
 
-    <gazebo reference="left2_wheel"> 
+    <gazebo reference="left_front_wheel"> 
         <material>
-            Gazebo/Blue
+            Gazebo/Black
         </material>
     </gazebo>
 
 
     <!-- RIGHT WHEEL LINK -->
 
-    <joint name="right_wheel_joint" type="continuous">
+    <joint name="right_rare_wheel_joint" type="continuous">
         <parent link="base_link"/>
-        <child link="right_wheel"/>
+        <child link="right_rare_wheel"/>
         <origin xyz="-0.115 -0.15 0" rpy="0 0 0" />
         <axis xyz="0 -1 0"/>
     </joint>
 
-    <link name="right_wheel">
+    <link name="right_rare_wheel">
         <visual>
             <geometry>
                 <mesh filename="file:///home/artem/mesh_car/src/mesh_car/meshes/right_tire.stl" scale="0.002 0.002 0.002"/> 
             </geometry>
-            <material name="blue"/>
+            <material name="black"/>
         </visual>
         <collision>
             <geometry>
@@ -153,27 +167,27 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-     <gazebo reference="right_wheel"> 
+     <gazebo reference="right_rare_wheel"> 
         <material>
-            Gazebo/Blue
+            Gazebo/Black
         </material>
     </gazebo>
 
     <!-- RIGHT2 WHEEL LINK -->
 
-    <joint name="right2_wheel_joint" type="continuous">
+    <joint name="right_front_wheel_joint" type="continuous">
         <parent link="base_link"/>
-        <child link="right2_wheel"/>
+        <child link="right_front_wheel"/>
         <origin xyz="0.285 -0.15 0" rpy="0 0 0" />
         <axis xyz="0 -1 0"/>
     </joint>
 
-    <link name="right2_wheel">
+    <link name="right_front_wheel">
         <visual>
             <geometry>
                 <mesh filename="file:///home/artem/mesh_car/src/mesh_car/meshes/right_tire.stl" scale="0.002 0.002 0.002"/> 
             </geometry>
-            <material name="blue"/>
+            <material name="black"/>
         </visual>
         <collision>
             <geometry>
@@ -184,9 +198,9 @@
             <origin xyz="0 0 0" rpy="0 0 0"/>
         </xacro:inertial_cylinder>
     </link>
-     <gazebo reference="right2_wheel"> 
+     <gazebo reference="right_front_wheel"> 
         <material>
-            Gazebo/Blue
+            Gazebo/Black
         </material>
     </gazebo>
 </robot>

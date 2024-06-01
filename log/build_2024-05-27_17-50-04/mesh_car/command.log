@@ -1,0 +1,6 @@
+Invoking command in '/home/artem/mesh_car/src/mesh_car/build/mesh_car': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/artem/mesh_car/src/mesh_car -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/artem/mesh_car/src/mesh_car/install/mesh_car
+Invoked command in '/home/artem/mesh_car/src/mesh_car/build/mesh_car' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/artem/mesh_car/src/mesh_car -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/artem/mesh_car/src/mesh_car/install/mesh_car
+Invoking command in '/home/artem/mesh_car/src/mesh_car/build/mesh_car': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/artem/mesh_car/src/mesh_car/build/mesh_car -- -j8 -l8
+Invoked command in '/home/artem/mesh_car/src/mesh_car/build/mesh_car' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/artem/mesh_car/src/mesh_car/build/mesh_car -- -j8 -l8
+Invoking command in '/home/artem/mesh_car/src/mesh_car/build/mesh_car': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/artem/mesh_car/src/mesh_car/build/mesh_car
+Invoked command in '/home/artem/mesh_car/src/mesh_car/build/mesh_car' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/artem/mesh_car/src/mesh_car/build/mesh_car

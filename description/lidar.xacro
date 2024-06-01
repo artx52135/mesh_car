@@ -12,7 +12,7 @@
             <geometry>
                 <mesh filename="file:///home/artem/mesh_car/src/mesh_car/meshes/lidar.stl" scale="0.0015 0.0015 0.0015"/> 
             </geometry>
-            <material name="red"/>
+            <material name="white"/>
         </visual>
         <collision>
             <geometry>
@@ -27,19 +27,33 @@
 
 
     <gazebo reference="laser_frame">
-        <material>Gazebo/Red</material>
+        <material>Gazebo/White</material>
+      
 
         <sensor name="laser" type="ray">
             <pose> 0 0 0 0 0 0 </pose>
-            <visualize>false</visualize>
-            <update_rate>10</update_rate>
+            <always_on>true</always_on> 
+            <visualize>true</visualize>
+            <update_rate>20</update_rate>
             <ray>
                 <scan>
                     <horizontal>
                         <samples>360</samples>
                         <min_angle>-3.14</min_angle>
                         <max_angle>3.14</max_angle>
-                    </horizontal>
+                    </horizontal> 
+                    <!-- <horizontal>
+                            <samples>20</samples>
+                            <resolution>1</resolution> 
+                            <min_angle>${-pi/90}</min_angle>
+                            <max_angle>${pi/90}</max_angle>
+                        </horizontal>
+                        <vertical>
+                            <samples>20</samples>
+                            <resolution>1</resolution> 
+                            <min_angle>${-pi/150}</min_angle>
+                            <max_angle>${pi/150}</max_angle>
+                        </vertical> -->
                 </scan>
                 <range>
                     <min>0.3</min>

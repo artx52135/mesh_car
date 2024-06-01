@@ -13,7 +13,7 @@
                 <mesh filename="file:///home/artem/mesh_car/src/mesh_car/meshes/camera.stl" scale="0.0025 0.0025 0.0025"/> 
                 <!-- <box size="0.010 0.03 0.03"/> -->
             </geometry>
-            <material name="blue"/>
+            <material name="grey"/>
         </visual>
     </link>
 
@@ -29,11 +29,11 @@
 
 
     <gazebo reference="camera_link">
-        <material>Gazebo/Blue</material>
+        <material>Gazebo/Grey</material>
 
         <sensor name="camera" type="camera">
             <pose> 0 0 0 0 0 0 </pose>
-            <visualize>true</visualize>
+            <visualize>false</visualize>
             <update_rate>10</update_rate>
             <camera>
                 <horizontal_fov>1.089</horizontal_fov>
@@ -43,7 +43,7 @@
                     <height>480</height>
                 </image>
                 <clip>
-                    <near>0.1</near>
+                    <near>0.3</near>
                     <far>8.0</far>
                 </clip>
             </camera>
